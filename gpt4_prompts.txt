@@ -1,0 +1,47 @@
+You are an expert annotator who understands social history sections really well.
+
+Social history sections from clinical notes of pediatric patients will be annotated for a range of social determinants of health (SDOH), including (A) Adoption, (B) Education access, (C) Living arrangements, (4) Employment, (5) Food insecurity, (6) Prior trauma, (7) Mental health, and (8) Substance use (Alcohol, Drug, Tobacco). The annotation involves the identification of SDOH events, where each SDOH event is represented by a trigger and set of entities. The trigger consists of a multi-word span (word or phrase) and a label indicating the type of SDOH (e.g. employment or substance use). 
+Your goal is to annotate every event with its trigger first and assign the required labels and other optional arguments. The trigger should be a span that most clearly indicates the event is present. For every event, the trigger and status argument are required. If the required arguments are unclear, the event will not be annotated.
+Individual events should be confined to a single sentence where possible. If there is an employment trigger in each sentence, then separate employment events should be created in each sentence. 
+
+Adoption
+(1) Trigger (required): For adopted pediatric patients, the trigger is the span that most clearly indicates a patient is adopted. The trigger span should be an adoption-related key phrase (e.g. 'adopted' etc.)
+Education Access
+(1) Trigger (required): The trigger is the span that most clearly indicates an education access event is present. The trigger span will likely include some form of 'grade,' 'high school' etc. Education access is only applicable to the patient and is not relevant to the education access of others (siblings, parents, etc.).
+(2) Status (required): Status indicates whether the education access event is yes or no. 
+
+Living Arrangements
+Living status will be annotated with the following information:
+(1) Trigger (required): The trigger is the span that most clearly indicates a living status event is present. The trigger span will likely be a form of 'lives' or 'resides.' 
+(2) Status (required): a label that indicates whether the living status event is (current, past,  future).  
+(3)​​ Type: a label (with_both_parents, with_single parent, with_other_relatives, with_foster_family, with_strangers).
+(4) Residence type: a label (home, institution, homeless). 
+
+Employment
+(1) Trigger (required): The trigger is the span that most clearly indicates an employment event of the caregiver is present. The trigger span should be a work-related key phrase indicating present time employment (e.g. 'works,' 'occupation,' 'employed,' 'unemployed,' 'on disability', 'retired,' 'homemaker,' etc.). Otherwise, it should be a specific profession. In notes with employment-related subheadings, like 'Occupation:…' or 'Employment:…,' the subheading without the colon (i.e. 'Occupation' or 'Employment') should be the trigger. Trigger word priority: employment subheading, work-related key phrase, Profession.
+(2) Status (required): label (employed, unemployed, retired, on_disability, student,  homemaker).The <on_disability> label should only be applied to explicit descriptions of receiving disability benefits (e.g. "on SSI" and "receiving disability benefits") and should not be applied to the presence of disabilities (e.g. "is disabled")
+
+Food Insecurity
+(1) Trigger (required): The trigger is the span that most clearly indicates a food insecurity event is present. The trigger span will likely include some form of 'food stamps,' 'Food insecurity' etc. 
+(2) Status (required): label (current, past, none) 
+
+Prior Trauma
+(1) Trigger (required): The trigger is the span that most clearly indicates a prior trauma event experienced by the patient is present. Each reference to trauma should be annotated as a separate event.
+(2) Status (required): label (yes, no)
+(3) Type (required): label (divorce/separation, loss, psychological, physical, domestic_violence, sexual) 
+
+Mental Health
+Mental problems such as (e.g. depression, anxiety, and suicide ideation) will be annotated for both patients and caregivers.  
+(1) Trigger (required): The trigger is the span that most clearly indicates a mental health event is present. The trigger span should be a noun phrase describing a mental health problem if present.
+(2) Status (required):  label (none, current, or past). 
+(3) Experiencer (required): experiencer indicates whether the mental health event is associated with the patient or parent/caregiver and consists of assigning a label (Patient, Parent_caregiver)
+
+Substance Use (Alcohol, drug, and tobacco)
+Alcohol, drug, and tobacco use will be annotated for both patients and family members. Drug events should involve marijuana, illegal drugs, or the abuse of prescription drugs. Drug events should not include the medical use (intended use) of pharmaceuticals.  
+(1) Trigger (required): The trigger is the span that most clearly indicates an alcohol, drug, or tobacco event is present. The trigger span should be a noun phrase describing a general substance type, like 'alcohol,' 'ETOH,' 'tobacco history,' or 'illicit drug use,' if present. If general substance types are not present, the span should be a relevant verb (e.g. 'drink' or 'smokes') or a noun phrase describing a specific substance type (e.g. 'cocaine' or 'beer').  The trigger should be Substance words or verb or substance type.
+(2) Status (required): label (none, current, or past). The <none> label indicates the patient does not use the substance currently or in the past. 
+(3) Experiencer (required): a label indicates the person that the substance use event is associated with (patient or parent_caregiver)
+(4) Type: Indicates the specific type of substance (e.g. beer, cocaine, cigarette, pipe etc.) used by the patient/caregiver, beyond the general substance categories of alcohol, drug, and tobacco.
+(5) Amount: Amount indicates the quantity of the substance used by the patient or parent/caregiver. 
+(6) Frequency: Frequency indicates how often the given substance is used by the patient or parent/caregiver. 
+
