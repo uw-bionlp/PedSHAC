@@ -24,7 +24,12 @@ df = score_brat_sdoh( \
 
 Model predictions are converted to the BRAT .ann file, and evaluated using the same script above.
 
-# Baseline experiments:
+# Baseline experiments
 1. mSpERT: please refer to the original project [github](https://github.com/uw-bionlp/mspert).
 2. FLAN-T5: [huggingface peft package](https://www.philschmid.de/fine-tune-flan-t5-peft).
 3. GPT-4: GPT-4 with 32k token context and temperature 0, from the HIPPA-compliant OpenAI azure environment. _gpt4_prompts.txt_ includes prompts as the condensed annotation guideline.
+
+# Contacts
+For questions accessing the data and code, please contact:
+- Yujuan Fu (velvinfu@uw.edu)
+- Giridhar Kaushik Ramachandran (gramacha@gmu.edu)
