@@ -7,7 +7,7 @@ Dataset to be released, after the IRB approval from our home institution, and th
 
 
 # Annotator agreement and evaluation
-Annotator agreement is evaluated by Dr. Lybarger's [script](https://github.com/Lybarger/brat_scoring).
+Annotator agreement is evaluated by Dr. Kevin Lybarger's [script](https://github.com/Lybarger/brat_scoring).
 ```ruby
 from brat_scoring.scoring import score_brat_sdoh
 from brat_scoring.constants import EXACT, LABEL, OVERLAP, PARTIAL, MIN_DIST
