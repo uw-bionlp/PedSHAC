@@ -16,7 +16,7 @@ PedSHAC_format_conversiton.ipynb
 2. FLAN-T5: _peft_t5.py_. The code deploys the huggingface peft package, and is adapted from this [post](https://www.philschmid.de/fine-tune-flan-t5-peft). 
 ```console
 # training
-# the experiment_type is the customized name for your experiments, and the trained models will stored under the folder models/${experiment_name}
+# the experiment_type is the customized, and the trained models will  be stored under the folder models/{experiment_name}
 python peft_t5.py \
                       --train_path ${path_for_the_train_set} \
                       --valid_path ${path_for_the_validation_set} \
@@ -26,7 +26,7 @@ python peft_t5.py \
                       --mode 'train'
 
 # evaluation
-# the predictions models will be stored under the folder models/${experiment_name}
+# the predictions models will be stored under the folder models/{experiment_name}
 python peft_t5.py \
                       --train_path ${path_for_the_train_set} \
                       --valid_path ${path_for_the_validation_set} \
