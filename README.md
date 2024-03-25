@@ -6,7 +6,9 @@ Dataset, annotation guideline and baseline experiments for the PedSHAC corpora, 
 Dataset to be released, after the IRB approval from our home institution, and the de-identification step.
 
 ## data pre- and post-processing
-To allow model fine-tuning, the pre-processing script processes the BRAT .ann files from the annotation folder. The post-processing script transforms the data format back to the BRAT. ann file for evaluation. Please use this script for data conversion:
+The pre-processing script processes the .ann files from the BRAT annotation tool. The post-processing script transforms the model predictions back to the BRAT. ann files for evaluation. 
+
+Please use this script for data conversion:
 ```console
 PedSHAC_format_conversiton.ipynb
 ```
