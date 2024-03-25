@@ -1,0 +1,10 @@
+{
+    "SPACY_MODEL" : "en_core_web_sm",
+    "TOKEN":"tokens",
+    "ENTITY":"entities",
+    "RELATION":"relations",
+    "ID":"orig_id",
+    "SENTENCE_ID":"sent_id",
+    "MAXLEN":1000,
+    "SENTENCE_SEP":[".",","]
+}
