@@ -5,6 +5,37 @@ Dataset, annotation guideline and baseline experiments for the PedSHAC corpora, 
 # Dataset
 Dataset to be released, after the IRB approval from our home institution, and the de-identification step.
 
+## data pre- and post-processing
+To allow model fine-tuning, the pre-processing script processes the BRAT .ann files from the annotation folder. The post-processing script transforms the data format back to the BRAT. ann file for evaluation. Please use this script for data conversion:
+```console
+PedSHAC_format_conversiton.ipynb
+```
+
+# Baseline experiments
+1. mSpERT: please refer to the original project [github](https://github.com/uw-bionlp/mspert).
+2. FLAN-T5: _peft_t5.py_. The code deploys the huggingface peft package, and is adapted from this [post](https://www.philschmid.de/fine-tune-flan-t5-peft). 
+```console
+# training
+# the experiment_type is the customized name for your experiments, and the trained models will stored under the folder models/${experiment_name}
+python peft_t5.py \
+                      --train_path ${path_for_the_train_set} \
+                      --valid_path ${path_for_the_validation_set} \
+                      --model_id ${model_name} \
+                      --num_epoch ${num_epoch} \
+                      --experiment_name ${experiment_type} \
+                      --mode 'train'
+
+# evaluation
+# the predictions models will be stored under the folder models/${experiment_name}
+python peft_t5.py \
+                      --train_path ${path_for_the_train_set} \
+                      --valid_path ${path_for_the_validation_set} \
+                      --model_id ${model_name} \
+                      --num_epoch ${num_epoch} \
+                      --experiment_name ${experiment_type} \
+                      --mode 'eval' 
+```
+4. GPT-4: GPT-4 with 32k token context and temperature 0, from the HIPPA-compliant OpenAI azure environment. _gpt4_prompts.txt_ includes prompts as the condensed annotation guideline.
 
 # Annotator agreement and evaluation
 Annotator agreement is evaluated by Dr. Kevin Lybarger's [script](https://github.com/Lybarger/brat_scoring).
@@ -23,11 +54,6 @@ df = score_brat_sdoh( \
 ```
 
 Model predictions are converted to the BRAT .ann file, and evaluated using the same script above.
-
-# Baseline experiments
-1. mSpERT: please refer to the original project [github](https://github.com/uw-bionlp/mspert).
-2. FLAN-T5: [huggingface peft package](https://www.philschmid.de/fine-tune-flan-t5-peft).
-3. GPT-4: GPT-4 with 32k token context and temperature 0, from the HIPPA-compliant OpenAI azure environment. _gpt4_prompts.txt_ includes prompts as the condensed annotation guideline.
 
 # Contacts
 For questions accessing the data and code, please contact:
