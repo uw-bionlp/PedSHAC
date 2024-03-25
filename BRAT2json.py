@@ -11,9 +11,9 @@ import glob
 from tqdm import tqdm
 
 #import the dataloader for relationships
-from brat_scoring.brat import *
-from brat_scoring.labels import *
-from brat_scoring.document import *
+from brat_scoring.brat_scoring.brat import *
+from brat_scoring.brat_scoring.labels import *
+from brat_scoring.brat_scoring.document import *
 def load_json(filepath="config.json"):
     f = open(filepath)
     #dump to a json file
