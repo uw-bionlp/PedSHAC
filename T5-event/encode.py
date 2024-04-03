@@ -6,7 +6,7 @@
 """
 Originally sourced from: Brian Romanowski's github
 https://github.com/romanows/SDOH-n2c2/blob/main/scripts/extract-examples.py
-
+with minor modifications for pedSHAC schema
 
 
 Converts the n2c2 track 2 social determinants of health BRAT-annotated data into
