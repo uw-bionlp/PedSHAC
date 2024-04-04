@@ -22,10 +22,7 @@ df = score_brat_sdoh( \
 ```
 ## Data pre- and post-processing
 
-For the mSpERT model, the pre-processing script processes the .ann files from the BRAT annotation tool. The post-processing script transforms the model predictions back to the BRAT. ann files for evaluation. 
-1. Clone the BRAT conversion from Dr. Kevin Lybarger's [script](https://github.com/Lybarger/brat_scoring), and store it under the same repository.
-2. Conversion from BRAT to the mSpERT input format: _BRAT2json.py_. Please change the data_dir to the folder containing your BRAT .ann files.
-3. Conversion from mSpERT input to T5 input, and from model predictions to BRAT. ann files: format_conversion.ipynb
+For the mSpERT model, we apply the score from Dr. Kevin Lybarger's code on [SDoH extraction](https://github.com/Lybarger/sdoh_extraction).
 
 For T5-event model
 1. Run T5-event/encode.py on BRAT files (txt and ann) to generate event-format json files. (Adapted from [Microsoft N2C2 T5 project](https://github.com/romanows/SDOH-n2c2/blob/main/scripts/extract-examples.py)).
