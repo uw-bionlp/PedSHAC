@@ -3,7 +3,7 @@ The dataset, annotation guideline, and baseline experiments for the PedSHAC corp
 
 
 # Dataset
-Dataset to be released, after the IRB approval from our home institution, and the de-identification step.
+Dataset to be released, after the IRB approval from our home institution, and the de-identification step. Thanks for your patience!
 
 # Annotator agreement and evaluation
 Annotator agreement is evaluated by Dr. Kevin Lybarger's [script](https://github.com/Lybarger/brat_scoring).
