@@ -1,5 +1,5 @@
 # PedSHAC
-The dataset, annotation guideline, and baseline experiments for the PedSHAC corpora were published in the LREC-COLING 2024 paper, ['Extracting Social Determinants of Health from Pediatric Patient Notes Using Large Language Models: Novel Corpus and Methods.'](https://arxiv.org/abs/2404.00826)
+The dataset, annotation guideline, and baseline experiments for the PedSHAC corpora were published in the LREC-COLING 2024 paper, ['Extracting Social Determinants of Health from Pediatric Patient Notes Using Large Language Models: Novel Corpus and Methods.'](https://aclanthology.org/2024.lrec-main.618/)
 
 
 # Dataset
