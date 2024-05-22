@@ -70,3 +70,34 @@ sig_test.py runs the non-parametric bootstrap tests for any two different models
 For questions about accessing the data and code, please contact:
 - Yujuan Fu (velvinfu@uw.edu)
 - Giridhar Kaushik Ramachandran (gramacha@gmu.edu)
+
+#Citation
+```console
+@inproceedings{fu-etal-2024-extracting-social,
+    title = "Extracting Social Determinants of Health from Pediatric Patient Notes Using Large Language Models: Novel Corpus and Methods",
+    author = {Fu, Yujuan  and
+      Ramachandran, Giridhar Kaushik  and
+      Dobbins, Nicholas J.  and
+      Park, Namu  and
+      Leu, Michael  and
+      Rosenberg, Abby R.  and
+      Lybarger, Kevin  and
+      Xia, Fei  and
+      Uzuner, {\"O}zlem  and
+      Yetisgen, Meliha},
+    editor = "Calzolari, Nicoletta  and
+      Kan, Min-Yen  and
+      Hoste, Veronique  and
+      Lenci, Alessandro  and
+      Sakti, Sakriani  and
+      Xue, Nianwen",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+    month = may,
+    year = "2024",
+    address = "Torino, Italy",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.618",
+    pages = "7045--7056",
+    
+}
+```console
