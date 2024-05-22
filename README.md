@@ -71,7 +71,7 @@ For questions about accessing the data and code, please contact:
 - Yujuan Fu (velvinfu@uw.edu)
 - Giridhar Kaushik Ramachandran (gramacha@gmu.edu)
 
-#Citation
+# Citation
 ```console
 @inproceedings{fu-etal-2024-extracting-social,
     title = "Extracting Social Determinants of Health from Pediatric Patient Notes Using Large Language Models: Novel Corpus and Methods",
